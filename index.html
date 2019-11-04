@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header flex-row">
+        <a href="#" id='brand-name'>Andrey Sledkov</a>
+        <nav class='header__nav flex-row'>
+            <ul class="top-menu">
+                <li class='dd-menu'><a href="#">Контент</a>
+                    <ul class="flex-column">
+                        <li><a href="">Вариант 1</a></li>
+                        <li><a href="">Вариант 2</a></li>
+                        <li><a href="">Вариант 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Фразы</a></li>
+                <li><a href="">Ключевики</a></li>
+                <li><a href="">Соцсети</a></li>
+                <li><a href="">Контакты</a></li>
+                <li><a href="" id='nav-user'></a></li>
+            </ul>
+        </nav>
+        <span class='icon-bars'></span>
+    </header>
+    <div class="container flex-column">
+        <ul class="breadcrumbs">
+            <li><a class='icon-home' href="# "></a></li>
+            <li><a href="#">Проекты</a></li>
+            <li>Добавить</li>
+        </ul>
+        <h1 class="main__form-title">Добавить проект</h1>
+        <form class="flex-column" action="" method="">
+            <div class="main__form-row flex-row">
+                <label for="#category-select">Категория<span class="required-star"> *</span></label>
+                <div class="select-box flex-row">
+                    <select name="category-select" required id="category-select" onchange="this.style.color='black'">
+                        <option value="" selected>Выберите из списка</option>
+                        <option value="">Вариант 1</option>
+                        <option value="">Вариант 2</option>
+                        <option value="">Вариант 3</option>
+                    </select>
+                    <a href='#' class="icon-plus" aria-hidden="true"></a>
+                </div>
+                <div class="main__form-description">
+                    <span></span>
+                </div>
+            </div>
+            <div class="main__form-row flex-row">
+                <label for="#link-input">Ссылка<span class="required-star"> *</span></label>
+                <div class="select-box flex-row">
+                    <input type="text" required name="link-input" id="link-input">
+                </div>
+                <div class="main__form-description">
+                    <span>(Рекомендуется использовать латинские буквы без пробела. Необходима для формирования ссылки на
+                        саму страницу)</span>
+                </div>
+            </div>
+            <div class="main__form-row flex-row">
+                <label for="#keys-select">Ключевые слова</label>
+                <div class="select-box flex-row">
+                    <select name="keys-select" id="keys-select" onchange="this.style.color='black'">
+                        <option value="" selected>Выберите из списка</option>
+                        <option value="">Вариант 1</option>
+                        <option value="">Вариант 1</option>
+                        <option value="">Вариант 1</option>
+                    </select>
+                    <a href='#' class="icon-plus" aria-hidden="true"></a>
+                </div>
+                <div class="main__form-description">
+                    <span>(Метаданные страницы для поисковых систем)</span>
+                </div>
+            </div>
+            <div class="main__form-row flex-row">
+                <label for="#hashtags-select">Хештеги</label>
+                <div class="select-box flex-row">
+                    <select id="hashtags-select" name="hashtags-select" onchange="this.style.color='black'">
+                        <option value="" selected>Выберите из
+                            списка</option>
+                        <option value="">Вариант 1</option>
+                        <option value="">Вариант 2</option>
+                        <option value="">Вариант 3</option>
+                    </select>
+                    <a href='#' class="icon-plus" aria-hidden="true"></a>
+                </div>
+                <div class="main__form-description">
+                    <span>(Используются для удобной фильтрации проектов. Можно выбрать не более 3 шт.)</span>
+                </div>
+            </div>
+            <div class="main__form-row flex-row">
+                <label>Координаты</label>
+                <div class="select-box flex-row">
+                    <div class="input-box-column flex-column">
+                        <label for="#shirota-input" class='input__form-label'>Широта</label>
+                        <input type="text" name="shirota-input" id="shirota-input">
+                    </div>
+                    <div class="input-box-column flex-column">
+                        <label for="#dolgota-input" class='input__form-label'>Долгота</label>
+                        <input type="text" name="dolgota-input" id="dolgota-input">
+                    </div>
+                </div>
+                <div class="main__form-description">
+                    <span>(Используются для обозначения объекта на карте)</span>
+                </div>
+            </div>
+            <div class="main__form-row flex-row">
+                <label>Высота</label>
+                <div class="select-box flex-row">
+                    <div class="input-box-column flex-column">
+                        <label for="#without-postament">Без постамента</label>
+                        <div class="height__input-box flex-row">
+                            <input type="text" name="without-postament" id="without-postament">
+                            <select name="without-postament-meters" id="without-postament-meters"
+                                onchange="this.style.color='black'">
+                                <option value="" selected>М</option>
+                                <option value="">М</option>
+                                <option value="">СМ</option>
+                                <option value="">ММ</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input-box-column flex-column">
+                        <label for="#with-postament" class='input__form-label'>С постаментом</label>
+                        <div class="height__input-box flex-row">
+                            <input type="text" name="with-postament" id="with-postament">
+                            <select class='form__input-select' name="with-postament-meters" id="with-postament-meters"
+                                onchange="this.style.color='black'">
+                                <option value="" selected>М</option>
+                                <option value="">М</option>
+                                <option value="">СМ</option>
+                                <option value="">ММ</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__form-description">
+                    <span></span>
+                </div>
+            </div>
+            <div class="main__form-row flex-row">
+                <label>Дата открытия</label>
+                <div class="select-box">
+                    <input class='input__type-date' name="date-select" type="text" onfocus="(this.type='date')"
+                        onblur="if(!this.value)this.type='text'">
+                </div>
+                <div class="main__form-description">
+                        <span></span>
+                    </div>
+            </div>
+            <div class="tabs">
+                <ul class="tabs__caption flex-row">
+                    <li class="active">Изображения<span class="required-star"> *</span></li>
+                    <li>Фотогалерея<span class="required-star"> *</span></li>
+                    <li>YouTube</li>
+                    <li>3D модель</li>
+                </ul>
+                <div class="tabs__content active">
+                    <div class="media__content flex-row">
+                        <div class="media__content-photo-main flex-column">
+                            <div class="flex-row">
+                                <label>Основная фотография проекта<span class="required-star"> *</span></label>
+                                <label class='download-label'>Загрузить<input type="file" name="file"
+                                        id="main-photo"></label>
+                            </div>
+                            <div class="photo-card flex-column">
+                                <div class="image-box" style="background-image: url('img/main-photo.png');">
+                                    <label class="trash-image"><input type="file"></label>
+                                </div>
+                                <label for="" class='photo-name'>Название.jpg</label>
+                                <label for="">42.50 KB</label>
+                            </div>
+                        </div>
+                        <div class="media__content-photo-mini flex-column">
+                            <div class="flex-row">
+                                <label>Миниатюра проекта</label>
+                                <label class='download-label'>Загрузить<input type="file" name="file"
+                                        id="main-photo"></label>
+                            </div>
+                            <div class="photo-card flex-column">
+                                <div class="image-box" style="background-image: url('img/mini-photo.png');">
+                                    <label class="trash-image"><input type="file"></label>
+                                </div>
+                                <label for="" class='photo-name'>Название.jpg</label>
+                                <label for="">42.50 KB</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content">
+                    <div class="media__content-gallery flex-column">
+                        <div class="flex-row">
+                            <label>Загрузить не менее 5 шт.<span class="required-star"> *</span></label>
+                            <label class='download-label'>Загрузить<input type="file" name="file"
+                                    id="main-photo"></label>
+                        </div>
+                        <div class="media__content-gallery-inner flex-row">
+                            <div class="photo-card flex-column">
+                                <div class="image-box" style="background-image: url('img/gallery-photo1.png');">
+                                    <label class="trash-image"><input type="file"></label>
+                                </div>
+                                <label for="" class='photo-name'>Название.jpg</label>
+                                <label for="">42.50 KB</label>
+                            </div>
+                            <div class="photo-card flex-column">
+                                <div class="image-box" style="background-image: url('img/gallery-photo2.png');">
+                                    <label class="trash-image"><input type="file"></label>
+                                </div>
+                                <label for="" class='photo-name'>Название.jpg</label>
+                                <label for="">42.50 KB</label>
+                            </div>
+                            <div class="photo-card flex-column">
+                                <div class="image-box" style="background-image: url('img/gallery-photo3.png');">
+                                    <label class="trash-image"><input type="file"></label>
+                                </div>
+                                <label for="" class='photo-name'>Название.jpg</label>
+                                <label for="">42.50 KB</label>
+                            </div>
+                            <div class="photo-card flex-column">
+                                <div class="image-box" style="background-image: url('img/gallery-photo4.png');">
+                                    <label class="trash-image"><input type="file"></label>
+                                </div>
+                                <label for="" class='photo-name'>Название.jpg</label>
+                                <label for="">42.50 KB</label>
+                            </div>
+                            <div class="photo-card flex-column">
+                                <div class="image-box" style="background-image: url('img/gallery-photo1.png');">
+                                    <label class="trash-image"><input type="file"></label>
+                                </div>
+                                <label for="" class='photo-name'>Название.jpg</label>
+                                <label for="">42.50 KB</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__content">
+                    <div class="media__content-youtube flex-row no-wrap">
+                        <label>YouTube</label>
+                        <input type="text" name="youtube-input">
+                        <div class="main__form-description"><span>(Необходимо вставить ссылку с YouTube)</span></div>
+                    </div>
+                </div>
+                <div class="tabs__content">
+                    <div class="media__content-3dmodel flex-row no-wrap">
+                        <label>3D модель</label>
+                        <input type="text" name="3dmodel-input">
+                        <div class="main__form-description"><span>(Необходимо вставить ссылку с sketchfab.com. Если
+                                ссылка
+                                не указана, то автоматически подставляется первая фотография из фотогалереи)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="required-span"><span>Вы не загрузили фотографии в фотогалерею</span></div>
+            <div class="lang-tabs">
+                <ul class="tabs__caption lang__caption flex-row">
+                    <li class="active">Eng<span class="required-star"> *</span></li>
+                    <li>Ru<span class="required-star"> *</span></li>
+                </ul>
+                <div class="lang__form-content flex-column">
+                    <div class="lang__form-row flex-row">
+                        <label class='active' for="">Header <span class="required-star"> *</span></label>
+                        <label for="">Заголовок страницы<span class="required-star"> *</span></label>
+                        <input type="text" name="header-input" required>
+                    </div>
+                    <div class="lang__form-row flex-row">
+                        <label class='lang-eng active' for="">The full name of the project <span class="required-star">
+                                *</span></label>
+                        <label class='lang-ru' for="">Полное название проекта <span class="required-star">
+                                *</span></label>
+                        <input type="text" name="projectname-input" required>
+                    </div>
+                    <div class="lang__form-row flex-row">
+                        <label class='lang-eng active' for="" class='textarea-label'>Text <span class="required-star">
+                                *</span></label>
+                        <label class='lang-ru' for="" class='textarea-label'>Текст <span class="required-star">
+                                *</span></label>
+                        <div class="textarea-box">
+                            <textarea class="tinymce"></textarea>
+                        </div>
+                    </div>
+                    <div class="lang__form-row flex-row">
+                        <label class='lang-eng active' for="">Sculptor </label>
+                        <label class='lang-ru' for="">Скульптор </label>
+                        <input type="text" name="sculptor-input">
+                    </div>
+                    <div class="lang__form-row flex-row">
+                        <label class='lang-eng active' for="">Author of idea</label>
+                        <label class='lang-ru' for="">Автор идеи</label>
+                        <input type="text" name="author-input">
+                    </div>
+                    <div class="lang__form-row flex-row">
+                        <label class='lang-eng active' for="">Installation place</label>
+                        <label class='lang-ru' for="">Место установки</label>
+                        <input type="text" name="place-input">
+                    </div>
+                    <div class="lang__form-row flex-row">
+                        <label class='lang-eng active' for="">Material</label>
+                        <label class='lang-ru' for="">Материал</label>
+                        <input type="text" name="material-input">
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <button type="submit">Сохранить</button>
+                <button type="reset">Отменить</button>
+            </div>
+        </form>
+    </div>
+    <script src="tinymce/tinymce.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
